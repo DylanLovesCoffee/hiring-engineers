@@ -36,6 +36,16 @@ graphs = [
     },
     'title': 'My_Metric Past Hour Rollup'
   },
+  {
+    'definition': {
+      'requests': [
+        {'q': 'avg:my_metric{*} by {host}.rollup(sum, 1440)'},
+        {'q': "anomalies(avg:mysql.net.connections{*}, 'basic', 2)"}
+      ],
+      'viz': 'timeseries'
+    },
+    'title': 'My_Metric Rollup and MySQL Connection Anomalies'
+  },
 ]
 
 template_variables = [{
