@@ -35,3 +35,5 @@ init_config:
 instances:
   [{}]
 ````
+Screenshot of the custom Agent check's timeline:
+![my_metric](./images/my_metric.png)
