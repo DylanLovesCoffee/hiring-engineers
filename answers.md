@@ -61,3 +61,31 @@ Use of the @mention function on a snapshot below:
 ### Documentation and References
 * [DD API Timeboards](https://docs.datadoghq.com/api/?lang=ruby#timeboards)
 * [Rollup Function](https://docs.datadoghq.com/graphing/#aggregation-groups)
+
+## Monitoring Data
+Below are the emails received for my_metric's monitoring alerts:
+
+* Alert
+
+![alert](./images/monitor_alert.png)
+
+* Warning
+
+![warn](./images/monitor_warning.png)
+
+* No Data
+
+![no_data](./images/monitor_no_data.png)
+
+Below are screenshots of the scheduled downtimes:
+
+* Weekdays 7pm - 9pm
+
+![weekday_downtime](./images/weekday_downtime.png)
+
+* Weekends (as I didn't want to wait until the weekend for an email, below is a screenshot of the scheduled downtime)
+
+![weekend_downtime](./images/weekend_downtime.png)
+
+### Documentation and References
+* [Monitoring Guide](https://docs.datadoghq.com/guides/monitors/#setup-notifications)
