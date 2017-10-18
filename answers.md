@@ -113,3 +113,9 @@ And as seen on my Datadog Traces page in the screenshot below, the above resourc
 
 ### Documentation and References
 * [Resources vs Services](https://help.datadoghq.com/hc/en-us/articles/115000702546-What-is-the-Difference-Between-Type-Service-Resource-and-Name-)
+
+## Final Question
+### Monitor Your Local Gym
+I'm the type of person who enjoys going to the gym at a time when almost nobody but the staff is around. Mainly due to the availability of machines and a lower chance of awkward locker room situations.
+
+Since my respective Blink Fitness uses some sort of POS system to check gym members in, I'm sure it would be possible to monitor the number of members that have checked in within the past hour. This would give me a precise indication to the foot traffic in the gym at the moment before I even leave my home. If we were to go a step further and monitor the use of a machine, I could easily decide if I'm going to skip leg day or not.
