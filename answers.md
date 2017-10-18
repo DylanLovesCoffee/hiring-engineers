@@ -38,9 +38,6 @@ instances:
 Screenshot of the custom Agent check's timeline:
 ![my_metric](./images/my_metric.png)
 
-### Documentation and References
-* [Writing a Custom Agent Check](https://blog.devopscomplete.com/writing-a-custom-datadog-agent-check-7367c98ffc5a)
-
 ## Visualizing Data
 Using the Datadog API, I created a timeboard titled MyMetric Timeboard (referencing the previous custom agent check). There are 4 timeseries graphs that were created:
   1. My_Metric Over Time - the custom metric scoped over my host
@@ -57,10 +54,6 @@ Use of the @mention function on a snapshot below:
 ![mention](./images/timeframe_mention.png)
 
 * The anomaly graph above is displaying what it believes is a normal trend. This is entirely based on the metric's past trends. If the current trend does not match what is typical, it will indicate to the user that there is an anomaly. This means that what a user may see as peaks and valleys in the graph may not exactly depict anomalies, as that could be typical pattern for the metric.
-
-### Documentation and References
-* [DD API Timeboards](https://docs.datadoghq.com/api/?lang=ruby#timeboards)
-* [Rollup Function](https://docs.datadoghq.com/graphing/#aggregation-groups)
 
 ## Monitoring Data
 Below are the emails received for my_metric's monitoring alerts:
@@ -87,9 +80,6 @@ Below are screenshots of the scheduled downtimes:
 
 ![weekend_downtime](./images/weekend_downtime.png)
 
-### Documentation and References
-* [Monitoring Guide](https://docs.datadoghq.com/guides/monitors/#setup-notifications)
-
 ## Collecting APM Datadog
 Using the given Flask app, I began tracing the app. Below is a screenshot of the dashboard created to represent the APM and infrastructure metrics. You can also view the screenboard [here](https://p.datadoghq.com/sb/235d07a23-65c05911f6).
 
@@ -111,11 +101,15 @@ def trace_endpoint():
 And as seen on my Datadog Traces page in the screenshot below, the above resources are listed out:
 ![trace_resources](./images/trace_resources.png)
 
-### Documentation and References
-* [Resources vs Services](https://help.datadoghq.com/hc/en-us/articles/115000702546-What-is-the-Difference-Between-Type-Service-Resource-and-Name-)
-
 ## Final Question
 ### Monitor Your Local Gym
 I'm the type of person who enjoys going to the gym at a time when almost nobody but the staff is around. Mainly due to the availability of machines and a lower chance of awkward locker room situations.
 
 Since my respective Blink Fitness uses some sort of POS system to check gym members in, I'm sure it would be possible to monitor the number of members that have checked in within the past hour. This would give me a precise indication to the foot traffic in the gym at the moment before I even leave my home. If we were to go a step further and monitor the use of a machine, I could easily decide if I'm going to skip leg day or not.
+
+## Documentation and References
+* [Writing a Custom Agent Check](https://blog.devopscomplete.com/writing-a-custom-datadog-agent-check-7367c98ffc5a)
+* [DD API Timeboards](https://docs.datadoghq.com/api/?lang=ruby#timeboards)
+* [Rollup Function](https://docs.datadoghq.com/graphing/#aggregation-groups)
+* [Monitoring Guide](https://docs.datadoghq.com/guides/monitors/#setup-notifications)
+* [Resources vs Services](https://help.datadoghq.com/hc/en-us/articles/115000702546-What-is-the-Difference-Between-Type-Service-Resource-and-Name-)
