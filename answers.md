@@ -48,7 +48,7 @@ Using the Datadog API, I created a timeboard titled MyMetric Timeboard (referenc
   3. My_Metric Past Hour Rollup - the custom metric with the rollup function, summing all points for the past hour
   4. My_Metric Rollup and MySQL Connection Anomalies - aggregate of the My_Metric Rollup and MySQL Anomalies graphs
 
-Please refer to ````create_timeboard.rb```` in the root directory of this repo for the code. Below is the screenshot of the graph:
+Please refer to ````create_timeboard.rb```` in the root directory of this repo for the [code](./create_timeboard.rb). Below is the screenshot of the graph:
 
 ![timeboard](./images/timeboard.png)
 
@@ -89,3 +89,27 @@ Below are screenshots of the scheduled downtimes:
 
 ### Documentation and References
 * [Monitoring Guide](https://docs.datadoghq.com/guides/monitors/#setup-notifications)
+
+## Collecting APM Datadog
+Using the given Flask app, I began tracing the app. Below is a screenshot of the dashboard created to represent the APM and infrastructure metrics. You can also view the screenboard [here](https://p.datadoghq.com/sb/235d07a23-65c05911f6).
+
+![apm_screenboard](./images/apm_screenboard.png)
+
+### Services vs Resources
+Services are programs that perform an essential function in your web app. For example, in my host, I am using MySQL as a database service. Additionally, the Flask app is a service.
+
+A resource is typically an object of your app that users can access using a URI. Using the previously given Flask app as an example, we defined several resources as seen here:
+````python
+@app.route('/api/apm')
+def apm_endpoint():
+  return 'Getting APM Started'
+
+@app.route('/api/trace')
+def trace_endpoint():
+  return 'Posting Traces'
+````
+And as seen on my Datadog Traces page in the screenshot below, the above resources are listed out:
+![trace_resources](./images/trace_resources.png)
+
+### Documentation and References
+* [Resources vs Services](https://help.datadoghq.com/hc/en-us/articles/115000702546-What-is-the-Difference-Between-Type-Service-Resource-and-Name-)
